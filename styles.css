@@ -45,7 +45,7 @@ body {
 .project-mark:hover,
 .project-mark:focus-visible {
   background: #9d4edd0d;
-  border-color: #c7f36b55;
+  border-color: #9d4edd55;
   outline: none;
 }
 .project-mark-label {
