@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Портфолио начинающего разработчика: PokeTracker, Liftoff, Artvard и командные проекты.">
+  <title>Prog — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="На главную">P<span>/</span></a>
+      <nav aria-label="Основная навигация">
+        <a href="#about" data-i18n="navAbout">Обо мне</a>
+        <a href="#projects" data-i18n="navProjects">Проекты</a>
+        <a href="#education" data-i18n="navEducation">Образование</a>
+        <a href="#contact" data-i18n="navContact">Контакты</a>
+      </nav>
+      <button class="language-switch" id="languageSwitch" type="button" aria-label="Switch language">EN</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span><span data-i18n="eyebrow">ПОРТФОЛИО · 2026</span></p>
+          <h1><span data-i18n="hello">Привет, я</span><br><span class="accent">Prog.</span></h1>
+          <p class="hero-lead" data-i18n="heroLead">Начинающий разработчик с практическим опытом собственных и командных проектов. Создаю веб- и мобильные приложения, работаю с данными и серверной логикой.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"><span data-i18n="seeProjects">Смотреть проекты</span><span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="https://github.com/YuKanNaKirikabu" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+          <div class="hero-meta">
+            <span data-i18n="based">Краснодар, Россия</span>
+            <span class="meta-separator">/</span>
+            <span data-i18n="openTo">Открыт к профессиональным возможностям</span>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <div class="portrait-frame">
+            <img src="profile.png" alt="Portrait of Prog" class="portrait" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <div class="portrait-placeholder"><span>PROFILE<br>PHOTO</span></div>
+          </div>
+          <span class="portrait-caption" data-i18n="portraitCaption">ФОТОГРАФИЯ · 1:1</span>
+          <span class="portrait-index">01 — 04</span>
+        </div>
+        <div class="hero-index" aria-hidden="true">01</div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">01 / <span data-i18n="aboutLabel">ПРОФИЛЬ</span></p>
+          <h2 data-i18n="aboutTitle">От идеи —<br>к работающему продукту.</h2>
+        </div>
+        <div class="about-content">
+          <p class="about-main" data-i18n="aboutText">Мой основной практический опыт сформировался в собственных проектах: от проектирования функций и структуры приложения до реализации интерфейса, серверной части и интеграций. Мне интересно разбираться в устройстве систем, находить подходящие технические решения и доводить идеи до рабочего состояния.</p>
+          <div class="skill-groups">
+            <div class="skill-group">
+              <h3 data-i18n="skillWeb">WEB</h3>
+              <p>HTML · CSS · JavaScript</p>
+            </div>
+            <div class="skill-group">
+              <h3 data-i18n="skillBackend">BACKEND & DATA</h3>
+              <p>Python · SQL · MongoDB · REST API</p>
+            </div>
+            <div class="skill-group">
+              <h3 data-i18n="skillMobile">MOBILE</h3>
+              <p>Flutter · Dart</p>
+            </div>
+            <div class="skill-group">
+              <h3 data-i18n="skillTools">TOOLS</h3>
+              <p>Git · GitHub · Yandex Object Storage</p>
+            </div>
+          </div>
+          <p class="skill-note" data-i18n="skillNote">Уровень владения технологиями различается; основной акцент — практический опыт, полученный в проектах.</p>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">02 / <span data-i18n="projectsLabel">ИЗБРАННОЕ</span></p>
+            <h2 data-i18n="projectsTitle">Проекты<span class="accent">.</span></h2>
+          </div>
+          <p class="section-aside" data-i18n="projectsAside">Собственные разработки<br>и командная работа</p>
+        </div>
+
+        <article class="project-card project-featured">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-topline"><span class="project-type" data-i18n="personalProject">ЛИЧНЫЙ ПРОЕКТ</span><span class="project-year">2025 — 2026</span></div>
+            <h3>PokeTracker</h3>
+            <p class="project-description" data-i18n="pokeDesc">Веб-платформа для Pokémon-сообщества, объединяющая учёт коллекции, список желаемого и поиск обменов. Проект вырос из небольшого инструмента для обмена картами с друзьями в многофункциональный сервис.</p>
+            <ul class="project-points">
+              <li data-i18n="pokePoint1">Коллекции, список желаемого и предложения обмена</li>
+              <li data-i18n="pokePoint2">Друзья, личные чаты и система обменов</li>
+              <li data-i18n="pokePoint3">Pokédex и интерфейс на 12 языках</li>
+              <li data-i18n="pokePoint4">Серверная логика, база данных и облачное хранение изображений</li>
+            </ul>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>MongoDB</span><span>Yandex Object Storage</span></div>
+            <div class="project-links"><a href="http://195.133.1.33:1025" target="_blank" rel="noreferrer" data-i18n="liveDemo">Открыть демо ↗</a><span data-i18n="privateSource">Исходный код временно закрыт</span></div>
+          </div>
+          <div class="project-mark">PT<span>↗</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-topline"><span class="project-type" data-i18n="personalProject">ЛИЧНЫЙ ПРОЕКТ</span><span class="project-year">2024</span></div>
+            <h3>Liftoff</h3>
+            <p class="project-description" data-i18n="liftoffDesc">Мобильное приложение для изучения ракет SpaceX и истории запусков. Данные и материалы загружаются через внешние API; для запусков доступны подробности и видеоматериалы.</p>
+            <ul class="project-points">
+              <li data-i18n="liftoffPoint1">Каталог ракет и технические характеристики</li>
+              <li data-i18n="liftoffPoint2">История запусков с фильтрацией по результату</li>
+              <li data-i18n="liftoffPoint3">Страницы запусков и встроенное видео</li>
+            </ul>
+            <div class="tags"><span>Flutter</span><span>Dart</span><span>REST API</span><span>YouTube API</span></div>
+            <div class="project-links"><a href="https://github.com/YuKanNaKirikabu/LiftOFF" target="_blank" rel="noreferrer" data-i18n="sourceCode">Исходный код ↗</a></div>
+          </div>
+          <div class="project-mark">LF<span>↗</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">03</div>
+          <div class="project-body">
+            <div class="project-topline"><span class="project-type" data-i18n="personalProject">ЛИЧНЫЙ ПРОЕКТ</span><span class="project-year">2024</span></div>
+            <h3>Artvard</h3>
+            <p class="project-description" data-i18n="artvardDesc">Мобильный каталог произведений Harvard Art Museums. Приложение позволяет искать и фильтровать объекты коллекции, просматривать подробную информацию и сохранять избранное.</p>
+            <ul class="project-points">
+              <li data-i18n="artvardPoint1">Поиск, фильтрация и постраничная загрузка каталога</li>
+              <li data-i18n="artvardPoint2">Карточка объекта с изображением и описанием</li>
+              <li data-i18n="artvardPoint3">Избранное с локальным сохранением</li>
+            </ul>
+            <div class="tags"><span>Flutter</span><span>Dart</span><span>Riverpod</span><span>REST API</span></div>
+            <div class="project-links"><a href="https://github.com/YuKanNaKirikabu/Artvard" target="_blank" rel="noreferrer" data-i18n="sourceCode">Исходный код ↗</a></div>
+          </div>
+          <div class="project-mark">AV<span>↗</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">04</div>
+          <div class="project-body">
+            <div class="project-topline"><span class="project-type" data-i18n="teamProject">КОМАНДНЫЙ ПРОЕКТ · 6 ЧЕЛОВЕК</span><span class="project-year">—</span></div>
+            <h3>Studmi</h3>
+            <p class="project-description" data-i18n="studmiDesc">Командный веб-проект для университетской среды. Идея и концепция проекта предложены мной; участвовал в развитии продукта вместе с командой.</p>
+            <div class="tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+            <div class="project-links"><a href="https://github.com/GrigorevNikOfficial/stolovayaGAU" target="_blank" rel="noreferrer" data-i18n="sourceCode">Исходный код ↗</a></div>
+          </div>
+          <div class="project-mark">ST<span>↗</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">05</div>
+          <div class="project-body">
+            <div class="project-topline"><span class="project-type" data-i18n="hackathonProject">ХАКАТОН · КОМАНДНЫЙ ПРОЕКТ</span><span class="project-year">—</span></div>
+            <h3>PharmaGO</h3>
+            <p class="project-description" data-i18n="pharmaDesc">Веб-сервис онлайн-аптеки. Участвовал в разработке backend-части. В проекте предусмотрен поиск товаров по пользовательскому описанию симптомов с использованием семантического ML-поиска.</p>
+            <div class="tags"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>REST API</span></div>
+            <div class="project-links"><a href="https://github.com/YuKanNaKirikabu/market-main" target="_blank" rel="noreferrer" data-i18n="sourceCode">Исходный код ↗</a></div>
+          </div>
+          <div class="project-mark">PG<span>↗</span></div>
+        </article>
+      </section>
+
+      <section class="section education-section" id="education">
+        <div class="section-heading">
+          <p class="eyebrow">03 / <span data-i18n="educationLabel">ОБРАЗОВАНИЕ</span></p>
+          <h2 data-i18n="educationTitle">База и развитие.</h2>
+        </div>
+        <div class="education-content">
+          <div class="education-date">2023 — 2027</div>
+          <div>
+            <h3 data-i18n="university">Кубанский государственный аграрный университет</h3>
+            <p data-i18n="degree">Прикладная информатика · бакалавриат</p>
+            <p class="education-detail" data-i18n="specialization">Профиль: менеджмент ИТ-проектов, управление жизненным циклом информационных систем.</p>
+          </div>
+        </div>
+        <div class="education-content thesis">
+          <div class="education-date" data-i18n="thesisLabel">ВЫПУСКНАЯ РАБОТА</div>
+          <div>
+            <h3 data-i18n="thesisTitle">Разработка серверной части информационной системы агрегации и учёта заявок для международных грузоперевозок</h3>
+          </div>
+        </div>
+        <div class="languages-row">
+          <span data-i18n="languagesLabel">ЯЗЫКИ</span>
+          <p><strong data-i18n="russian">Русский</strong> — <span data-i18n="native">родной</span><br><strong>English</strong> — B1 (Intermediate)</p>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <p class="eyebrow">04 / <span data-i18n="contactLabel">КОНТАКТЫ</span></p>
+        <h2 data-i18n="contactTitle">Есть идея или<br>предложение?</h2>
+        <p class="contact-copy" data-i18n="contactCopy">Открыт к обсуждению проектов, стажировок и профессиональных возможностей.</p>
+        <div class="contact-links">
+          <a href="https://github.com/YuKanNaKirikabu" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          <a href="https://x.com/ProgNotesFTP" target="_blank" rel="noreferrer">X / Twitter <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 PROG</span>
+      <span data-i18n="footerNote">Сделано с вниманием к деталям.</span>
+      <a href="#top" data-i18n="backTop">Наверх ↑</a>
+    </footer>
+  </div>
+  <script>
+    const translations = {
+      ru: {
+        navAbout:"Обо мне",navProjects:"Проекты",navEducation:"Образование",navContact:"Контакты",
+        eyebrow:"ПОРТФОЛИО · 2026",hello:"Привет, я",heroLead:"Начинающий разработчик с практическим опытом собственных и командных проектов. Создаю веб- и мобильные приложения, работаю с данными и серверной логикой.",seeProjects:"Смотреть проекты",based:"Краснодар, Россия",openTo:"Открыт к профессиональным возможностям",portraitCaption:"ФОТОГРАФИЯ · 1:1",
+        aboutLabel:"ПРОФИЛЬ",aboutTitle:"От идеи —<br>к работающему продукту.",aboutText:"Мой основной практический опыт сформировался в собственных проектах: от проектирования функций и структуры приложения до реализации интерфейса, серверной части и интеграций. Мне интересно разбираться в устройстве систем, находить подходящие технические решения и доводить идеи до рабочего состояния.",
+        skillWeb:"WEB",skillBackend:"BACKEND & DATA",skillMobile:"MOBILE",skillTools:"TOOLS",skillNote:"Уровень владения технологиями различается; основной акцент — практический опыт, полученный в проектах.",
+        projectsLabel:"ИЗБРАННОЕ",projectsTitle:"Проекты<span class='accent'>.</span>",projectsAside:"Собственные разработки<br>и командная работа",personalProject:"ЛИЧНЫЙ ПРОЕКТ",teamProject:"КОМАНДНЫЙ ПРОЕКТ · 6 ЧЕЛОВЕК",hackathonProject:"ХАКАТОН · КОМАНДНЫЙ ПРОЕКТ",
+        pokeDesc:"Веб-платформа для Pokémon-сообщества, объединяющая учёт коллекции, список желаемого и поиск обменов. Проект вырос из небольшого инструмента для обмена картами с друзьями в многофункциональный сервис.",pokePoint1:"Коллекции, список желаемого и предложения обмена",pokePoint2:"Друзья, личные чаты и система обменов",pokePoint3:"Pokédex и интерфейс на 12 языках",pokePoint4:"Серверная логика, база данных и облачное хранение изображений",liveDemo:"Открыть демо ↗",privateSource:"Исходный код временно закрыт",
+        liftoffDesc:"Мобильное приложение для изучения ракет SpaceX и истории запусков. Данные и материалы загружаются через внешние API; для запусков доступны подробности и видеоматериалы.",liftoffPoint1:"Каталог ракет и технические характеристики",liftoffPoint2:"История запусков с фильтрацией по результату",liftoffPoint3:"Страницы запусков и встроенное видео",sourceCode:"Исходный код ↗",
+        artvardDesc:"Мобильный каталог произведений Harvard Art Museums. Приложение позволяет искать и фильтровать объекты коллекции, просматривать подробную информацию и сохранять избранное.",artvardPoint1:"Поиск, фильтрация и постраничная загрузка каталога",artvardPoint2:"Карточка объекта с изображением и описанием",artvardPoint3:"Избранное с локальным сохранением",
+        studmiDesc:"Командный веб-проект для университетской среды. Идея и концепция проекта предложены мной; участвовал в развитии продукта вместе с командой.",pharmaDesc:"Веб-сервис онлайн-аптеки. Участвовал в разработке backend-части. В проекте предусмотрен поиск товаров по пользовательскому описанию симптомов с использованием семантического ML-поиска.",
+        educationLabel:"ОБРАЗОВАНИЕ",educationTitle:"База и развитие.",university:"Кубанский государственный аграрный университет",degree:"Прикладная информатика · бакалавриат",specialization:"Профиль: менеджмент ИТ-проектов, управление жизненным циклом информационных систем.",thesisLabel:"ВЫПУСКНАЯ РАБОТА",thesisTitle:"Разработка серверной части информационной системы агрегации и учёта заявок для международных грузоперевозок",languagesLabel:"ЯЗЫКИ",russian:"Русский",native:"родной",
+        contactLabel:"КОНТАКТЫ",contactTitle:"Есть идея или<br>предложение?",contactCopy:"Открыт к обсуждению проектов, стажировок и профессиональных возможностей.",footerNote:"Сделано с вниманием к деталям.",backTop:"Наверх ↑"
+      },
+      en: {
+        navAbout:"About",navProjects:"Projects",navEducation:"Education",navContact:"Contact",
+        eyebrow:"PORTFOLIO · 2026",hello:"Hello, I'm",heroLead:"An aspiring developer with hands-on experience building personal and team projects. I work on web and mobile applications, data, and backend logic.",seeProjects:"Explore projects",based:"Krasnodar, Russia",openTo:"Open to professional opportunities",portraitCaption:"PROFILE PHOTO · 1:1",
+        aboutLabel:"PROFILE",aboutTitle:"From an idea —<br>to a working product.",aboutText:"Most of my practical experience comes from personal projects: from planning features and application structure to implementing interfaces, backend logic, and integrations. I enjoy understanding how systems work, choosing suitable technical solutions, and turning ideas into working products.",
+        skillWeb:"WEB",skillBackend:"BACKEND & DATA",skillMobile:"MOBILE",skillTools:"TOOLS",skillNote:"My proficiency varies by technology; the focus here is on hands-on experience gained through projects.",
+        projectsLabel:"SELECTED WORK",projectsTitle:"Projects<span class='accent'>.</span>",projectsAside:"Personal development<br>and teamwork",personalProject:"PERSONAL PROJECT",teamProject:"TEAM PROJECT · 6 PEOPLE",hackathonProject:"HACKATHON · TEAM PROJECT",
+        pokeDesc:"A web platform for the Pokémon community that brings together collection tracking, wishlists, and trade discovery. It started as a small tool for trading cards with friends and grew into a multifunctional service.",pokePoint1:"Collections, wishlists, and trade listings",pokePoint2:"Friends, private chats, and a trading system",pokePoint3:"Pokédex and a 12-language interface",pokePoint4:"Backend logic, database, and cloud image storage",liveDemo:"Live demo ↗",privateSource:"Source code is currently private",
+        liftoffDesc:"A mobile app for exploring SpaceX rockets and launch history. Data and media are retrieved through external APIs, with detailed launch pages and video content.",liftoffPoint1:"Rocket catalogue and technical specifications",liftoffPoint2:"Launch history with outcome filtering",liftoffPoint3:"Launch details and embedded video",sourceCode:"Source code ↗",
+        artvardDesc:"A mobile catalogue for the Harvard Art Museums collection. Users can search and filter objects, view detailed information, and save favourites.",artvardPoint1:"Catalogue search, filters, and paginated loading",artvardPoint2:"Object details with image and description",artvardPoint3:"Locally stored favourites",
+        studmiDesc:"A team web project for the university community. I proposed the original idea and concept and contributed to product development alongside the team.",pharmaDesc:"An online pharmacy web service. I contributed to backend development. The project includes semantic ML-based product search using symptom descriptions provided by users.",
+        educationLabel:"EDUCATION",educationTitle:"Learning and growth.",university:"Kuban State Agrarian University",degree:"Applied Informatics · Bachelor's degree",specialization:"Focus: IT project management and information systems lifecycle management.",thesisLabel:"GRADUATION PROJECT",thesisTitle:"Development of the backend for an information system for aggregating and managing international freight transportation requests",languagesLabel:"LANGUAGES",russian:"Russian",native:"native",
+        contactLabel:"CONTACT",contactTitle:"Have an idea or<br>an opportunity?",contactCopy:"Open to discussing projects, internships, and professional opportunities.",footerNote:"Made with attention to detail.",backTop:"Back to top ↑"
+      }
+    };
+    const switcher = document.getElementById('languageSwitch');
+    let currentLanguage = 'ru';
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const value = translations[language][element.dataset.i18n];
+        if (value !== undefined) element.innerHTML = value;
+      });
+      switcher.textContent = language === 'ru' ? 'EN' : 'RU';
+      document.title = language === 'ru' ? 'Prog — Portfolio' : 'Prog — Portfolio';
+      document.querySelector('meta[name="description"]').content = language === 'ru'
+        ? 'Портфолио начинающего разработчика: PokeTracker, Liftoff, Artvard и командные проекты.'
+        : 'Developer portfolio: PokeTracker, Liftoff, Artvard, and team projects.';
+    }
+    switcher.addEventListener('click', () => setLanguage(currentLanguage === 'ru' ? 'en' : 'ru'));
+  </script>
+</body>
+</html>
