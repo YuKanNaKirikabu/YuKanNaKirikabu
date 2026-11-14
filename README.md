@@ -1,4 +1,4 @@
-# Prog — Portfolio
+# ProgNotesFTP — Portfolio
 
 > Начинающий разработчик с практическим опытом собственных и командных проектов.  
 > An aspiring developer with hands-on experience building personal and team projects.
@@ -110,4 +110,4 @@ Development of the backend for an information system for aggregating and managin
 
 ---
 
-© 2026 Prog
+© 2026 ProgNotesFTP
