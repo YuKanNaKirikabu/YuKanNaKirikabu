@@ -271,14 +271,21 @@
     const sideProjectToggle = document.querySelector(".side-project-toggle");
     const sideProjectsGroup = document.getElementById("sideProjectsGroup");
     const sideProjectLinks = document.getElementById("sideProjectLinks");
+    let projectNavigationPending = false;
     sideProjectToggle.addEventListener("click", () => {
       const expanded = sideProjectToggle.getAttribute("aria-expanded") === "true";
-      sideProjectToggle.setAttribute("aria-expanded", String(!expanded));
-      sideProjectsGroup.classList.toggle("is-expanded", !expanded);
+      const nextExpanded = !expanded;
+      sideProjectToggle.setAttribute("aria-expanded", String(nextExpanded));
+      sideProjectsGroup.classList.toggle("is-expanded", nextExpanded);
+      projectNavigationPending = nextExpanded;
     });
     sideProjectLinks.addEventListener("click", () => {
       sideProjectToggle.setAttribute("aria-expanded", "true");
       sideProjectsGroup.classList.add("is-expanded");
+      projectNavigationPending = true;
+    });
+    sideLinks.filter(link => link !== sideProjectToggle).forEach(link => {
+      link.addEventListener("click", () => { projectNavigationPending = false; });
     });
     const trackedSections = ["about", "projects", "education", "contact"].map(id => document.getElementById(id));
     const updateSideRail = () => {
@@ -290,9 +297,16 @@
       sideLinks.forEach(link => {
         const selected = link.dataset.section === active.id;
         link.classList.toggle("is-active", selected);
-        if (selected && link === sideProjectToggle) { sideProjectToggle.setAttribute("aria-expanded", "true"); sideProjectsGroup.classList.add("is-expanded"); }
+        if (selected && link === sideProjectToggle) {
+          projectNavigationPending = false;
+          sideProjectToggle.setAttribute("aria-expanded", "true");
+          sideProjectsGroup.classList.add("is-expanded");
+        }
       });
-      if (active.id !== "projects") { sideProjectToggle.setAttribute("aria-expanded", "false"); sideProjectsGroup.classList.remove("is-expanded"); }
+      if (active.id !== "projects" && !projectNavigationPending) {
+        sideProjectToggle.setAttribute("aria-expanded", "false");
+        sideProjectsGroup.classList.remove("is-expanded");
+      }
     };
     window.addEventListener("scroll", updateSideRail, { passive: true });
     window.addEventListener("resize", updateSideRail);
