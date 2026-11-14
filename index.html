@@ -12,6 +12,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <aside class="side-rail" aria-label="Навигация по странице">
+    <div class="side-rail-progress" aria-hidden="true"><span id="sideProgress"></span></div>
+    <nav class="side-rail-nav">
+      <a class="side-link is-active" href="#about" data-section="about"><span class="side-link-index">01</span><span data-i18n="navAbout">Обо мне</span></a>
+      <div class="side-group" id="sideProjectsGroup">
+        <a class="side-link side-project-toggle" href="#projects" data-section="projects" aria-expanded="false" aria-controls="sideProjectLinks"><span class="side-link-index">02</span><span data-i18n="navProjects">Проекты</span><span class="side-chevron" aria-hidden="true">+</span></a>
+        <div class="side-project-links" id="sideProjectLinks">
+          <a href="#project-poketracker">PokeTracker</a><a href="#project-liftoff">Liftoff</a><a href="#project-artvard">Artvard</a><a href="#project-studmi">Studmi</a><a href="#project-pharmago">PharmaGO</a>
+        </div>
+      </div>
+      <a class="side-link" href="#education" data-section="education"><span class="side-link-index">03</span><span data-i18n="navEducation">Образование</span></a>
+      <a class="side-link" href="#contact" data-section="contact"><span class="side-link-index">04</span><span data-i18n="navContact">Контакты</span></a>
+    </nav>
+  </aside>
   <div class="page-shell">
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="На главную">P<span>/</span></a>
@@ -46,7 +60,6 @@
             <div class="portrait-placeholder"><span>PROFILE<br>PHOTO</span></div>
           </div>
           <span class="portrait-caption" data-i18n="portraitCaption">ФОТОГРАФИЯ · 1:1</span>
-          <span class="portrait-index">01 — 04</span>
         </div>
         <div class="hero-index" aria-hidden="true">01</div>
       </section>
@@ -54,7 +67,7 @@
       <section class="section about-section" id="about">
         <div class="section-heading">
           <p class="eyebrow">01 / <span data-i18n="aboutLabel">ПРОФИЛЬ</span></p>
-          <h2 data-i18n="aboutTitle">От идеи —<br>к работающему продукту.</h2>
+          <h2 data-i18n="aboutTitle">От идеи — к работающему продукту.</h2>
         </div>
         <div class="about-content">
           <p class="about-main" data-i18n="aboutText">Мой основной практический опыт сформировался в собственных проектах: от проектирования функций и структуры приложения до реализации интерфейса, серверной части и интеграций. Мне интересно разбираться в устройстве систем, находить подходящие технические решения и доводить идеи до рабочего состояния.</p>
@@ -89,7 +102,7 @@
           <p class="section-aside" data-i18n="projectsAside">Собственные разработки<br>и командная работа</p>
         </div>
 
-        <article class="project-card project-featured">
+        <article class="project-card project-featured" id="project-poketracker">
           <div class="project-number">01</div>
           <div class="project-body">
             <div class="project-topline"><span class="project-type" data-i18n="personalProject">ЛИЧНЫЙ ПРОЕКТ</span><span class="project-year">2025 — 2026</span></div>
@@ -107,7 +120,7 @@
           <a class="project-mark" href="http://195.133.1.33:1025" target="_blank" rel="noreferrer" aria-label="Открыть PokeTracker"><span class="project-mark-label">PT</span><span class="project-mark-arrow" aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" id="project-liftoff">
           <div class="project-number">02</div>
           <div class="project-body">
             <div class="project-topline"><span class="project-type" data-i18n="personalProject">ЛИЧНЫЙ ПРОЕКТ</span><span class="project-year">2024</span></div>
@@ -124,7 +137,7 @@
           <a class="project-mark" href="https://github.com/YuKanNaKirikabu/LiftOFF" target="_blank" rel="noreferrer" aria-label="Открыть Liftoff"><span class="project-mark-label">LF</span><span class="project-mark-arrow" aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" id="project-artvard">
           <div class="project-number">03</div>
           <div class="project-body">
             <div class="project-topline"><span class="project-type" data-i18n="personalProject">ЛИЧНЫЙ ПРОЕКТ</span><span class="project-year">2024</span></div>
@@ -141,7 +154,7 @@
           <a class="project-mark" href="https://github.com/YuKanNaKirikabu/Artvard" target="_blank" rel="noreferrer" aria-label="Открыть Artvard"><span class="project-mark-label">AV</span><span class="project-mark-arrow" aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" id="project-studmi">
           <div class="project-number">04</div>
           <div class="project-body">
             <div class="project-topline"><span class="project-type" data-i18n="teamProject">КОМАНДНЫЙ ПРОЕКТ · 6 ЧЕЛОВЕК</span><span class="project-year">—</span></div>
@@ -153,7 +166,7 @@
           <a class="project-mark" href="https://github.com/GrigorevNikOfficial/stolovayaGAU" target="_blank" rel="noreferrer" aria-label="Открыть Studmi"><span class="project-mark-label">ST</span><span class="project-mark-arrow" aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" id="project-pharmago">
           <div class="project-number">05</div>
           <div class="project-body">
             <div class="project-topline"><span class="project-type" data-i18n="hackathonProject">ХАКАТОН · КОМАНДНЫЙ ПРОЕКТ</span><span class="project-year">—</span></div>
@@ -195,9 +208,10 @@
         <p class="eyebrow">04 / <span data-i18n="contactLabel">КОНТАКТЫ</span></p>
         <h2 data-i18n="contactTitle">Есть идея или<br>предложение?</h2>
         <p class="contact-copy" data-i18n="contactCopy">Открыт к обсуждению проектов, стажировок и профессиональных возможностей.</p>
-        <div class="contact-links">
-          <a href="https://github.com/YuKanNaKirikabu" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-          <a href="https://x.com/ProgNotesFTPNotesFTP" target="_blank" rel="noreferrer">X / Twitter <span>↗</span></a>
+        <div class="contact-links" aria-label="Социальные сети">
+          <a class="contact-icon-link" href="https://github.com/YuKanNaKirikabu" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.08c-3.1.68-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.06 1.15a10.6 10.6 0 0 1 5.57 0c2.12-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3 0 4.29-2.61 5.23-5.1 5.51.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></a>
+          <a class="contact-icon-link" href="https://x.com/ProgNotesFTP" target="_blank" rel="noreferrer" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.4L5.58 22H2.45l7.25-8.29L1.8 2h6.4l4.43 6.75L18.9 2Zm-1.1 17.9h1.73L7.27 4H5.42L17.8 19.9Z"/></svg></a>
+          <a class="contact-icon-link" href="https://t.me/ProgNotesFTP" target="_blank" rel="noreferrer" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.8 4.2 18.5 20c-.25 1.12-.91 1.4-1.85.87l-5.1-3.76-2.46 2.37c-.27.27-.5.5-1.02.5l.36-5.18 9.43-8.52c.41-.36-.09-.56-.64-.2L5.57 13.4.54 11.82c-1.1-.35-1.12-1.1.23-1.6L20.44 2.6c.91-.34 1.71.22 1.36 1.6Z"/></svg></a>
         </div>
       </section>
     </main>
@@ -212,7 +226,7 @@
       ru: {
         navAbout:"Обо мне",navProjects:"Проекты",navEducation:"Образование",navContact:"Контакты",
         eyebrow:"ПОРТФОЛИО · 2026",hello:"Привет, я",heroLead:"Начинающий разработчик с практическим опытом собственных и командных проектов. Создаю веб- и мобильные приложения, работаю с данными и серверной логикой.",seeProjects:"Смотреть проекты",based:"Краснодар, Россия",openTo:"Открыт к профессиональным возможностям",portraitCaption:"ФОТОГРАФИЯ · 1:1",
-        aboutLabel:"ПРОФИЛЬ",aboutTitle:"От идеи —<br>к работающему продукту.",aboutText:"Мой основной практический опыт сформировался в собственных проектах: от проектирования функций и структуры приложения до реализации интерфейса, серверной части и интеграций. Мне интересно разбираться в устройстве систем, находить подходящие технические решения и доводить идеи до рабочего состояния.",
+        aboutLabel:"ПРОФИЛЬ",aboutTitle:"От идеи — к работающему продукту.",aboutText:"Мой основной практический опыт сформировался в собственных проектах: от проектирования функций и структуры приложения до реализации интерфейса, серверной части и интеграций. Мне интересно разбираться в устройстве систем, находить подходящие технические решения и доводить идеи до рабочего состояния.",
         skillWeb:"WEB",skillBackend:"BACKEND & DATA",skillMobile:"MOBILE",skillTools:"TOOLS",skillNote:"Уровень владения технологиями различается; основной акцент — практический опыт, полученный в проектах.",
         projectsLabel:"ИЗБРАННОЕ",projectsTitle:"Проекты<span class='accent'>.</span>",projectsAside:"Собственные разработки<br>и командная работа",personalProject:"ЛИЧНЫЙ ПРОЕКТ",teamProject:"КОМАНДНЫЙ ПРОЕКТ · 6 ЧЕЛОВЕК",hackathonProject:"ХАКАТОН · КОМАНДНЫЙ ПРОЕКТ",
         pokeDesc:"Веб-платформа для Pokémon-сообщества, объединяющая учёт коллекции, список желаемого и поиск обменов. Проект вырос из небольшого инструмента для обмена картами с друзьями в многофункциональный сервис.",pokePoint1:"Коллекции, список желаемого и предложения обмена",pokePoint2:"Друзья, личные чаты и система обменов",pokePoint3:"Pokédex и интерфейс на 12 языках",pokePoint4:"Серверная логика, база данных и облачное хранение изображений",liveDemo:"Открыть демо ↗",privateSource:"Исходный код временно закрыт",
@@ -225,7 +239,7 @@
       en: {
         navAbout:"About",navProjects:"Projects",navEducation:"Education",navContact:"Contact",
         eyebrow:"PORTFOLIO · 2026",hello:"Hello, I'm",heroLead:"An aspiring developer with hands-on experience building personal and team projects. I work on web and mobile applications, data, and backend logic.",seeProjects:"Explore projects",based:"Krasnodar, Russia",openTo:"Open to professional opportunities",portraitCaption:"PROFILE PHOTO · 1:1",
-        aboutLabel:"PROFILE",aboutTitle:"From an idea —<br>to a working product.",aboutText:"Most of my practical experience comes from personal projects: from planning features and application structure to implementing interfaces, backend logic, and integrations. I enjoy understanding how systems work, choosing suitable technical solutions, and turning ideas into working products.",
+        aboutLabel:"PROFILE",aboutTitle:"From an idea to a working product.",aboutText:"Most of my practical experience comes from personal projects: from planning features and application structure to implementing interfaces, backend logic, and integrations. I enjoy understanding how systems work, choosing suitable technical solutions, and turning ideas into working products.",
         skillWeb:"WEB",skillBackend:"BACKEND & DATA",skillMobile:"MOBILE",skillTools:"TOOLS",skillNote:"My proficiency varies by technology; the focus here is on hands-on experience gained through projects.",
         projectsLabel:"SELECTED WORK",projectsTitle:"Projects<span class='accent'>.</span>",projectsAside:"Personal development<br>and teamwork",personalProject:"PERSONAL PROJECT",teamProject:"TEAM PROJECT · 6 PEOPLE",hackathonProject:"HACKATHON · TEAM PROJECT",
         pokeDesc:"A web platform for the Pokémon community that brings together collection tracking, wishlists, and trade discovery. It started as a small tool for trading cards with friends and grew into a multifunctional service.",pokePoint1:"Collections, wishlists, and trade listings",pokePoint2:"Friends, private chats, and a trading system",pokePoint3:"Pokédex and a 12-language interface",pokePoint4:"Backend logic, database, and cloud image storage",liveDemo:"Live demo ↗",privateSource:"Source code is currently private",
@@ -252,6 +266,37 @@
         : 'Developer portfolio: PokeTracker, Liftoff, Artvard, and team projects.';
     }
     switcher.addEventListener('click', () => setLanguage(currentLanguage === 'ru' ? 'en' : 'ru'));
+    const sideProgress = document.getElementById("sideProgress");
+    const sideLinks = [...document.querySelectorAll(".side-link[data-section]")];
+    const sideProjectToggle = document.querySelector(".side-project-toggle");
+    const sideProjectsGroup = document.getElementById("sideProjectsGroup");
+    const sideProjectLinks = document.getElementById("sideProjectLinks");
+    sideProjectToggle.addEventListener("click", () => {
+      const expanded = sideProjectToggle.getAttribute("aria-expanded") === "true";
+      sideProjectToggle.setAttribute("aria-expanded", String(!expanded));
+      sideProjectsGroup.classList.toggle("is-expanded", !expanded);
+    });
+    sideProjectLinks.addEventListener("click", () => {
+      sideProjectToggle.setAttribute("aria-expanded", "true");
+      sideProjectsGroup.classList.add("is-expanded");
+    });
+    const trackedSections = ["about", "projects", "education", "contact"].map(id => document.getElementById(id));
+    const updateSideRail = () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+      sideProgress.style.height = (progress * 100) + "%";
+      let active = trackedSections[0];
+      trackedSections.forEach(section => { if (section.getBoundingClientRect().top <= window.innerHeight * .42) active = section; });
+      sideLinks.forEach(link => {
+        const selected = link.dataset.section === active.id;
+        link.classList.toggle("is-active", selected);
+        if (selected && link === sideProjectToggle) { sideProjectToggle.setAttribute("aria-expanded", "true"); sideProjectsGroup.classList.add("is-expanded"); }
+      });
+      if (active.id !== "projects") { sideProjectToggle.setAttribute("aria-expanded", "false"); sideProjectsGroup.classList.remove("is-expanded"); }
+    };
+    window.addEventListener("scroll", updateSideRail, { passive: true });
+    window.addEventListener("resize", updateSideRail);
+    updateSideRail();
   </script>
 </body>
 </html>
