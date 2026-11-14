@@ -107,3 +107,19 @@ body {
     font-size: clamp(2.5rem, 10vw, 3.4rem);
   }
 }
+
+/* Keep project monograms visually distinct from the arrow glyph. */
+.project-mark .project-mark-label {
+  color: #aeb3bd;
+  font: 800 25px/1 var(--sans);
+  letter-spacing: -1.8px;
+  margin: 0;
+}
+.project-mark .project-mark-arrow {
+  color: var(--accent);
+  font: 12px/1 var(--mono);
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .project-mark .project-mark-label { font-size: 21px; }
+}
